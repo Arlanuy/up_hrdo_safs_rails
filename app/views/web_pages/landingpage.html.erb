@@ -1,0 +1,101 @@
+<body>
+  <!-- HEADER-->
+<div class="ui red fixed inverted stackable menu">
+  <div class="ui container" id="hybrid">
+    <%= link_to "HRDO Scholarship and Fellowship Services", landingpage_path, class: "item" %>
+    <%= link_to "Self Evaluation", evaluation_path, class: "item" %>
+    <div class="ui inactive simple dropdown item">
+      <a href="">Application Process </a><i class="dropdown icon"></i>
+      <div class="menu">
+        <%= link_to "Study Leave", apply_studyleave_path, class: "item" %>
+        <%= link_to "Doctoral Studies Fund", apply_dsf_path , class: "item" %>
+        <%= link_to "Sabbatical", apply_sabbatical_path, class: "item" %>
+        <%= link_to "Special Detail", apply_specialdetail_path, class: "item" %>
+        <%= link_to "Enrollment Privileges", apply_enrollmentprivileges_path, class: "item" %>
+      </div>
+    </div>
+    <%= link_to "RSO Calculator", rsocalculator_path, class: "item"%>
+    <%= link_to "Contact Us", contactus_path, class: "item"%>
+  </div>
+</div>
+
+
+
+<div class="pusher">
+  <br><br>
+  <div class="ui five column doubling stackable grid container">
+    <div class="column">
+    </div>
+    <div class="column">
+      <center>
+      <div class="ui raised segment" id="segment">
+        <br>
+        <a href="<?php echo base_url(); ?>apply/studyleave">
+        <div class="ui circular icon button" id="iconbutton1" name="readbutton">
+          <i class="huge circular file text outline icon"></i>
+        </div>
+        </a>
+        <h1>
+          Read
+        </h1>
+        <p>
+          Read about the application processes and requirements for the type of leave you would like to apply for.
+        </p>
+      </div>
+      </center>
+    </div>
+    <div class="column">
+      <center>
+      <div class="ui raised segment" id="segment">
+        <br>
+        <a href="<?php echo base_url(); ?>evaluation">
+        <div class="ui circular icon button" id="iconbutton2">
+          <i class="huge circular help icon"></i>
+        </div>
+        </a>
+        <h1>
+          Self Evaluate
+        </h1>
+        <p>
+          Evaluate yourself so you can confirm your eligibility to apply.
+        </p>
+      </div>
+      </center>
+    </div>
+    <div class="column">
+      <center>
+      <div class="ui raised segment" id="segment">
+        <br>
+        <a href="<?php echo base_url(); ?>rsocalculator">
+        <div class="ui circular icon button" id="iconbutton3">
+          <i class="huge circular calculator icon"></i>
+        </div>
+        </a>
+        <h1>
+          Calcuate
+        </h1>
+        <p>
+          Calculate your return service obligation for your return to campus.
+        </p>
+      </div>
+      </center>
+    </div>
+    <div class="column">
+    </div>
+  </div>
+</div>
+<!-- FOOTER -->
+<div class="ui red center aligned inverted vertical footer segment">
+  <div class="ui horizontal inverted small divided link list">
+    <%= link_to "Osmeña Avenue, Diliman,  Quezon City,  Metro Manila", "https://www.google.com.ph/maps/place/Quezon+Hall/@14.6548946,121.0650716,15z/data=!4m5!3m4!1s0x0:0x78351c9414d84f
+    d6!8m2!3d14.6548946!4d121.0650716", class: "item" %>
+    <%= link_to "hrdo.updiliman@up.edu.ph", contactus_path, class: "item" %>
+    <%= link_to "uphrdotraining@gmail.com", "https://uphrdotna.herokuapp.com", class: "item" %><a> </a>
+    <%= link_to "hrdo.upd.edu.ph", "http://hrdo.upd.edu.ph/", class: "item" %>
+    <p><br>Copyright © 2017<p>
+  </div>
+</div>
+
+
+
+</body>
