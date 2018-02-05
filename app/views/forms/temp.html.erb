@@ -1,0 +1,79 @@
+<form class="ui form" action="<?=$_SERVER['PHP_SELF'];?>" id="myform" method="post">
+              <div class="inline fields">
+                <div class="field">
+                <label><i class="travel icon"></i>Type of Leave:</label>
+                  <%= radio_button_tag(:areaInp_0, "abroad") %>
+                  <%= label_tag(:localabroad, "Abroad") %>
+                  <%= radio_button_tag(:areaInp_0, "local") %>
+                  <%= label_tag(:localabroad, "Local") %>
+                  <%= check_box_tag(:paidInp_0) %>
+                  <%= label_tag(:paidInp_0, "With pay?") %>
+                </div>
+              </div>
+              <div class="equal width fields">
+                <div class="field">
+                  <label><i class="student icon"></i>Employee Type</label>
+                  <div class="ui search selection dropdown" id="empdrop1">
+                  <input name="emptype" id="emptype1" type="hidden">
+                    <i class="dropdown icon"></i>
+                    <div class="default text" id="et1">Employee Type</div>
+                    <% select_tag(:emptype, options_for_select([
+                      ['Faculty', 'F', {'data-value' => 'F', 'class' => 'item'}],
+                      ['Administrative Staff', 'A', {'data-value' => 'A', 'class' => 'item'}],
+                      ['REPS', 'R', {'data-value' => 'R', 'class' => 'item'}]], 3
+                    ), {class: "menu"}) %>
+                    </div>
+                </div>
+                <div id="rankdrop1" class="disabled field">
+                  <label><i class="student icon"></i>Rank (if faculty)</label>
+                  <div class="ui search selection dropdown">
+                    <input name="rank" id="rank1" type="hidden" disabled>
+                    <i class="dropdown icon"></i>
+                    <div class="default text" id="fr1">Faculty Rank</div>
+                    <div class="menu">
+                        <div class="item" data-value="1">Professor</div>
+                        <div class="item" data-value="2">Associate Professor</div>
+                        <div class="item" data-value="3">Assistant Professor</div>
+                        <div class="item" data-value="4">Instructor</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="inline fields">
+                  <div class="field">
+                    <label>Substitute?</label>
+                      <%= radio_button_tag(:subs, "subsyes") %>
+                      <%= label_tag(:subs, "Yes") %>
+                      <%= radio_button_tag(:subs, "subsno") %>
+                      <%= label_tag(:subs, "No") %>
+                  </div>
+                  <div class="field" style="margin-left: 50px;">
+                  <label>Tenured?</label>
+                      <%= radio_button_tag(:tenured, "tenyes") %>
+                      <%= label_tag(:tenured, "Yes") %>
+                      <%= radio_button_tag(:tenured, "tenno") %>
+                      <%= label_tag(:tenured, "No") %>
+                  </div>
+              </div>
+              <div class="inline field">
+                <label><i class="hourglass full icon"></i>Years of Service (Regular):</label>
+                <div class="ui right labeled input">
+                  <input name="servYear" id="servYear1" type="number" value="" min="0" style="width:80px;">
+                  <div class="ui label">year/s</div>
+                </div>
+              </div>
+              <div class="field">
+                <label><i class="birthday icon"></i>Birthday</label>
+                <div class="ui calendar" id="SLbirthdayCal">
+                  <div class="ui left icon input">
+                    <i class="calendar icon"></i>
+                    <input name="birthday" id="birthday1" type="text" placeholder="mm/dd/yyyy">
+                  </div>
+                </div>
+              </div>
+
+              <button class="ui blue fluid button" type="submit" name="Sub_SL" value="Sub_SL">Evaluate</button>
+              <div class="ui center aligned container" style="margin-top: 10px; font-size: 13px;">
+                <a href="javascript:void(0)" class="resetlink">Reset</a>
+              </div>
+            </form>
