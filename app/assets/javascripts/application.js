@@ -17,3 +17,5 @@
 //= require_tree .
 //= require jquery-ui
 //= require semantic-ui
+
+//= require bootstrap-datepicker

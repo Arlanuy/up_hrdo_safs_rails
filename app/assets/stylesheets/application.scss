@@ -14,4 +14,9 @@
  *= require_self
  *= require jquery-ui
  *= require semantic-ui
+
+ *= require bootstrap-datepicker3
  */
+ .hidden {
+   display: none;
+ }

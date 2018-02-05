@@ -12,6 +12,9 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass',          '3.3.7'
 gem 'semantic-ui-sass'
 
+gem 'bootstrap-datepicker-rails'
+
+
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -31,6 +34,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 
 gem 'jquery-ui-rails'
+
+gem 'mail_form'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

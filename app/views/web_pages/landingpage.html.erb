@@ -1,7 +1,7 @@
+
 <html>
  <%= stylesheet_link_tag    'employee_landing_page' %>
 <body>
-
 
 <div class="pusher">
   <br><br>
@@ -12,7 +12,6 @@
       <center>
       <div class="ui raised segment" id="segment">
         <br>
-
         <%= link_to apply_studyleave_path do %>
         <div class="ui circular icon button" id="iconbutton1" name="readbutton">
           <i class="huge circular file text outline icon"></i>
@@ -33,7 +32,8 @@
       <div class="ui raised segment" id="segment">
         <br>
 
-        <%= link_to evaluation_path do %>
+        <%= link_to forms_evaluation_path do %>
+
         <div class="ui circular icon button" id="iconbutton2">
           <i class="huge circular help icon"></i>
         </div>
@@ -58,7 +58,6 @@
           <i class="huge circular calculator icon"></i>
         </div>
         <% end %>
-
         <h1>
           Calculate
         </h1>
@@ -72,7 +71,5 @@
     </div>
   </div>
 </div>
-
-
 </body>
 </html>

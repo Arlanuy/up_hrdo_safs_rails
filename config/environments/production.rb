@@ -1,5 +1,24 @@
 Rails.application.configure do
+
+
+
   # Settings specified here will take precedence over those in config/application.rb.
+
+  #newly added
+  config.active_record.dump_schema_after_migration = false
+  config.action_mailer.default_url_options = { host: 'https://up-hrdo-safs-rails.herokuapp.com'}
+  config.action_mailer.delivery_method = :smtp
+
+  ActionMailer::Base.smtp_settings = {
+    :address => 'smtp.sendgrid.net',
+    :port => '587'
+    :authentication => :plain,
+    :user_name => ENV['SENDGRID_USERNAME'],
+    :password => ENV['SENDGRID_PASSWORD'],
+    :domain => 'heroku.com',
+    :enable_starttls_auto => true
+  }
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true

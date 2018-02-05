@@ -5,7 +5,9 @@
 <%= javascript_include_tag  'calculator/calculator' %>
 <%= javascript_include_tag  'calculator/cookieMunch' %>
 <%= javascript_include_tag  'calculator/moment/moment-with-locales.min' %>
+
 <%= stylesheet_link_tag     'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css' %>
+
 <%= stylesheet_link_tag     'RSO_calculator' %>
 
 <head>
@@ -23,7 +25,8 @@
         <form id="rsoform" class="ui form">
 
           <div class="ui stackable divided grid">
-          <div class="eight wide column">
+          <div class="eight wide center aligned column">
+
 
 
           <a onchange="tCompute()"><label class="switch">
@@ -45,8 +48,10 @@
                 <div class="sub header">(mm/dd/yyyy)</div>
               </h1></label>
               <div class="ui input left icon" style="width: 15em;">
-                <i class="calendar icon"></i>
-                <input class="form-control"  id='staDate_0' placeholder="mm/dd/yyyy">
+
+                <i class="calendar icon" id='react'></i>
+                <input class="form-control"  id='staDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker">
+
               </div>
               <i class="info circle icon link" data-title="Start Date" data-content="This is the start of the leave applied for. This is calculated from the start (00:00:00 AM) of the date." data-offset="-12"></i>
             </div>
@@ -55,14 +60,18 @@
                 <div class="sub header">(mm/dd/yyyy)</div>
               </h1></label>
               <div class="ui input left icon" style="width: 15em;">
-                <i class="calendar icon"></i>
-                <input class="form-control"   id='endDate_0' placeholder="mm/dd/yyyy">
+
+                <i class="calendar icon" id='react'></i>
+                <input class="form-control"   id='endDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker">
+
               </div>
               <i class="info circle icon link" data-title="End Date" data-content="This is the end of the leave applied for. This is calculated from the end (24:00:00 PM) of the date."  data-offset="-12"></i>
             </div>
           </div>
 
-          <div class="eight wide column">
+
+          <div class="eight wide center aligned column">
+
           <div class="inp">
             <div class="inline field">
               <label>Duration of SL</label>
@@ -141,4 +150,5 @@
       })
     ;
     </script>
+
 </html>
