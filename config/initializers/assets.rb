@@ -7,10 +7,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
-<<<<<<< HEAD
 
-=======
->>>>>>> before_3rd_setup_for_heroku
 Rails.application.config.assets.precompile += %w( application_process.scss )
 Rails.application.config.assets.precompile += %w( employee_landing_page.scss )
 Rails.application.config.assets.precompile += %w( RSO_calculator.scss )
@@ -19,10 +16,7 @@ Rails.application.config.assets.precompile += %w( calendar.min.scss )
 Rails.application.config.assets.precompile += %w( calculator/cookieMunch.js )
 Rails.application.config.assets.precompile += %w( calculator/calculator.js )
 Rails.application.config.assets.precompile += %w( calculator/moment/moment-with-locales.min.js )
-<<<<<<< HEAD
 
-=======
->>>>>>> before_3rd_setup_for_heroku
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
