@@ -101,7 +101,7 @@
             <?php } ?> -->
 
             <div class="ui icon message">
-              <%= render html: "#{@message}"%>
+              <%= render html: "#{@message}".html_safe %>
               </div>
 
           </div>
