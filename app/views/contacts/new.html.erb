@@ -97,9 +97,14 @@
 
             <?php } ?> -->
 
-            <div class="ui icon message">
-              <%= render html: "#{@message}".html_safe %>
-              </div>
+            <div class="ui icon message <%= @error == 1 ? 'error': 'success' %>">
+              <div class="content">
+                <div class="header">
+                  <%= @message %>
+                </div>
+                <p><%=@submessage %></p>
+            </div>
+          </div>
 
           </div>
 
