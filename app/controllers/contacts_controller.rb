@@ -10,23 +10,27 @@ class ContactsController < ApplicationController
       @contact.request = request
       if @contact.deliver
         #flash.now[:message] = nil
-        @message = "<i class='icon success'></i>
-                <div class='content'>
-                  <div class='header'>
+        @message = "<div class='ui icon message success'>
+                    <i class='icon check'></i>
+                    <div class='content'>
+                    <div class='header'>
                     'Message successfully sent!'
-                  </div>
+                    </div>
                     <p>'We will be in touch with you soon.'</p>
-                </div>"
+                    </div>
+                    </div>"
         render :new
       else
         #flash.now[:message] = 'Cannot send message.'
-        @message = "<i class='icon success'></i>
-                <div class='content'>
-                  <div class='header'>
+        @message = "<div class='ui icon message success error'>
+                    <i class='icon warning'></i>
+                    <div class='content'>
+                    <div class='header'>
                     'Could not send your message! Please resend your e-mail.'
-                  </div>
+                    </div>
                     <p>'Contact HRDO if the problem still persists.'</p>
-                </div>"
+                    </div>
+                    </div>"
         render :new
       end
 
