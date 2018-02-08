@@ -140,10 +140,8 @@
                   <%= f.text_field :nickname, hint: 'leave this field blank' %>
                 </div>
 
-                <button class="ui right floated green submit button" id="btn_send" name="btn_send" value="Send" type="submit" form="sendmail">
-                  <i class="send icon"></i>
-                  Send Message
-                </button>
+                  <%= f.submit 'Send Message', class: "ui right floated green submit button" %>
+
 
               <% end %>
           </div>
