@@ -2,11 +2,10 @@
 <html>
 <%= javascript_include_tag  'https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js'%>
 <%= javascript_include_tag  'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.js'%>
+<%= javascript_include_tag  'calculator/moment/moment-with-locales.min' %>
 <%= javascript_include_tag  'calculator/calculator' %>
 <%= javascript_include_tag  'calculator/cookieMunch' %>
-<%= javascript_include_tag  'calculator/moment/moment-with-locales.min' %>
 
-<%= stylesheet_link_tag     'https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.6/semantic.min.css' %>
 
 <%= stylesheet_link_tag     'RSO_calculator' %>
 
@@ -29,6 +28,8 @@
 
 
 
+          <div class="field">
+
           <a onchange="tCompute()"><label class="switch">
             <input type="checkbox" id="areaInp_0" class="switch-input" checked>
             <span class="switch-label" data-on="Abroad" data-off="Local"></span>
@@ -41,6 +42,8 @@
           </label></a>
           <i class="info circle icon link" data-title="Study Leave Type" data-content="Toggle the buttons to select study leave type" data-offset="-12"></i>
 
+          </div>
+
           <br><br>
 
             <div class="field">
@@ -50,7 +53,8 @@
               <div class="ui input left icon" style="width: 15em;">
 
                 <i class="calendar icon" id='react'></i>
-                <input class="form-control"  id='staDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker">
+
+                 <input class="form-control"  id='staDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker" onchange="tCompute()">
 
               </div>
               <i class="info circle icon link" data-title="Start Date" data-content="This is the start of the leave applied for. This is calculated from the start (00:00:00 AM) of the date." data-offset="-12"></i>
@@ -62,7 +66,9 @@
               <div class="ui input left icon" style="width: 15em;">
 
                 <i class="calendar icon" id='react'></i>
-                <input class="form-control"   id='endDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker">
+
+                 <input class="form-control"   id='endDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker" onchange="tCompute()">
+
 
               </div>
               <i class="info circle icon link" data-title="End Date" data-content="This is the end of the leave applied for. This is calculated from the end (24:00:00 PM) of the date."  data-offset="-12"></i>
@@ -80,7 +86,9 @@
             </div>
             <div class="inline field">
               <label>Report for Duty</label>
-              <input class="form-control"   id='repDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker">
+
+               <input class="form-control"   id='repDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker" onchange="tCompute()">
+
               <i class="info circle icon link" data-title="Report for Duty Date" data-content="This is the start of the service obligation incurred due to the study leave. This falls on the start (00:00:00 AM) of the date." data-offset="-12"></i>
             </div>
             <div class="inline field">
@@ -95,8 +103,10 @@
             </div>
             <div class="inline field">
               <label>Separation Date</label>
-              <input class="form-control"   id='basDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker">
-              <i class="info circle icon link" data-title="Separation Date" data-content="This is a date wherein the number of days remaining of the service obligation is to be checked. This falls on the start (00:00:00 AM) of the date." data-offset="-12"></i>
+
+              <input class="form-control"   id='basDate_0' placeholder="mm/dd/yyyy" data-provide="datepicker" onchange="tCompute()">
+              <i class="info circle icon link" data-title="Separation Date" data-content="This is a date wherein the number of days remaining of the service obligation is to be checked. This falls on the start (00:00:00 AM) of the date." data-offset="-12" ></i>
+
             </div>
             <div class="inline field">
               <label>Unserved CO</label>

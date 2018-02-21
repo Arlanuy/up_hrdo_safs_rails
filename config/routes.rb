@@ -1,16 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'forms/eval_SL', to: 'forms#eval_SL'
 
-  get 'forms/eval_DSF', to: 'forms#eval_DSF'
-
-  get 'forms/eval_Sab', to: 'forms#eval_Sab'
-
-  get 'forms/eval_SD', to: 'forms#eval_SD'
-
-  get 'forms/eval_EP', to: 'forms#eval_EP'
-
-  get 'forms/evaluation', to: 'forms#evaluation'
+  get 'evaluate/evaluation', to: 'evaluate#evaluation'
 
   get 'apply/studyleave', to: 'apply#studyleave'
 
@@ -26,17 +17,27 @@ Rails.application.routes.draw do
 
   root 'web_pages#landingpage'
 
-  get '/landingpage',	to: 'web_pages#landingpage'
+  get '/landingpage', to: 'web_pages#landingpage'
 
-  get '/rsocalculator',	to: 'web_pages#rsocalculator'
+  get '/rsocalculator', to: 'web_pages#rsocalculator'
 
-  get 'contacts/contactus',		to: 'contacts#new'
+  get 'contact/contactus',   to: 'contact#new'
 
-  get 'contacts/create',		to: 'contacts#create'
+  get 'contact/create',    to: 'contact#create'
+
+  get 'evaluate/evaluation', to: 'evaluate#eval_SL'
+
+  get 'evaluate/evaluation', to: 'evaluate#eval_DSF'
+
+  get 'evaluate/evaluation', to: 'evaluate#eval_Sab'
+
+  get 'evaluate/evaluation', to: 'evaluate#eval_SD'
+
+  get 'evaluate/evaluation', to: 'evaluate#eval_EP'
 
   resources :apply
-  resources :forms
-  resources :contacts, only: [:new, :create]
+  resources :evaluate
+  resources :contact, only: [:new, :create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

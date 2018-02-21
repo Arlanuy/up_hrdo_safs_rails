@@ -1,8 +1,14 @@
 {
+<<<<<<< HEAD
   "name": "new_app",
   "private": true,
 
   "dependencies": {
     "semantic-ui-calendar": "0.0.8"
   }
+=======
+  "name": "UP_HRDOSAFS",
+  "private": true,
+  "dependencies": {}
+>>>>>>> origin/at_6th_release_development
 }

@@ -1,7 +1,9 @@
 <div class="ui red fixed inverted stackable menu">
   <div class="ui container" id="hybrid">
     <%= link_to  image_tag("logo_white.png") + "HRDO Scholarship and Fellowship Services".html_safe, landingpage_path, class: "item" %>
-    <%= link_to "Self Evaluation", forms_evaluation_path, class: "item" %>
+
+    <%= link_to "Self Evaluation", evaluate_evaluation_path, class: "item" %>
+
     <div class="ui inactive simple dropdown item">
       <a href="">Application Process</a><i class="dropdown icon"></i>
       <div class="menu">
@@ -14,6 +16,7 @@
     </div>
     <%= link_to "RSO Calculator", rsocalculator_path, class: "item"%>
 
-    <%= link_to "Contact Us", contacts_contactus_path, class: "item"%>
+    <%= link_to "Contact Us", contact_contactus_path, class: "item"%>
+
   </div>
 </div>
