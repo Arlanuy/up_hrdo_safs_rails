@@ -25,6 +25,7 @@ Rails.application.routes.draw do
 
   get 'contacts/create',    to: 'contacts#create'
 
+
   get 'evaluate/evaluation', to: 'evaluate#eval_SL'
 
   get 'evaluate/evaluation', to: 'evaluate#eval_DSF'

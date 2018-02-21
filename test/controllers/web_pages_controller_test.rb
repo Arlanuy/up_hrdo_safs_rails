@@ -7,6 +7,7 @@ class WebPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   test "should get evaluation" do
     get web_pages_evaluation_url
     assert_response :success
@@ -14,11 +15,14 @@ class WebPagesControllerTest < ActionDispatch::IntegrationTest
 
 =======
 >>>>>>> origin/at_6th_release_development
+=======
+>>>>>>> origin/at_6th_release_2nd_development
   test "should get rsocalculator" do
     get web_pages_rsocalculator_url
     assert_response :success
   end
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   test "should get contactus" do
     get web_pages_contactus_url
@@ -27,4 +31,6 @@ class WebPagesControllerTest < ActionDispatch::IntegrationTest
 
 =======
 >>>>>>> origin/at_6th_release_development
+=======
+>>>>>>> origin/at_6th_release_2nd_development
 end
