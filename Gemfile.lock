@@ -229,4 +229,8 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
+<<<<<<< HEAD
    1.16.1
+=======
+   1.15.4
+>>>>>>> origin/at_6th_release_2nd_development
