@@ -5,7 +5,4 @@ class WebPagesController < ApplicationController
   def rsocalculator
   end
 
-  def contactus
-  end
-
 end
