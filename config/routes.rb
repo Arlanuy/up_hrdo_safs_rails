@@ -21,9 +21,9 @@ Rails.application.routes.draw do
 
   get '/rsocalculator', to: 'web_pages#rsocalculator'
 
-  get 'contact/contactus',   to: 'contact#new'
+  get 'contacts/contactus',   to: 'contacts#new'
 
-  get 'contact/create',    to: 'contact#create'
+  get 'contacts/create',    to: 'contacts#create'
 
   get 'evaluate/evaluation', to: 'evaluate#eval_SL'
 
@@ -37,7 +37,7 @@ Rails.application.routes.draw do
 
   resources :apply
   resources :evaluate
-  resources :contact, only: [:new, :create]
+  resources :contacts, only: [:new, :create]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
